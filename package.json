@@ -1,0 +1,19 @@
+{
+  "name": "browserifiedbasejs",
+  "version": "1.0.0",
+  "description": "base project browserified",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify js/app.js -o js/bundle.js",
+    "watch": "watchify js/app.js -o js/bundle.js",
+    "min": "browserify js/app.js -d -p [minifyify --map bundle.js.map --output bundle_min.js.map] > bundle_min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "minifyify": "^7.3.3",
+    "watchify": "^3.7.0"
+  },
+  "author": "Thekho Ngaosathe",
+  "license": "ISC"
+}

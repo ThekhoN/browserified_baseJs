@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.relWrap {
+  position: relative;
+  width: 20em;
+  float: left;
+  height: 20em;
+  background: #f2f2f2;
+}
+
+.box {
+  width: 5em;
+  height: 5em;
+  background: orange;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.box.active {
+  -moz-transform: translateX(10em);
+  -ms-transform: translateX(10em);
+  -webkit-transform: translateX(10em);
+  transform: translateX(10em);
+}
+
+.sphere {
+  width: 5em;
+  height: 5em;
+  background: #bada55;
+  border-radius: 90em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.sphere.active {
+  -moz-transform: translateY(15em);
+  -ms-transform: translateY(15em);
+  -webkit-transform: translateY(15em);
+  transform: translateY(15em);
+}
+
+button.fixed {
+  padding: 0.6em;
+  position: fixed;
+  bottom: 30%;
+  left: 10%;
+}
+
+</style>
+</head>
+<body>
+<div class="mainWrapper">
+
+  <div class="relWrap">
+    <div class="box">
+    </div>
+    <div class="sphere">
+    </div>
+  </div>
+
+  <button class="fixed">animate</button>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/bundle.js"></script>
+</body>
+</html>
